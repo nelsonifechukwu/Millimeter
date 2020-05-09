@@ -42,13 +42,15 @@
 			</nav>
 		</header>
 		<div class="side-navbar" id="sideNavbar">
-			<ul>
-				<li id="sideNavbarHome" class=" side-navbar-item side-navbar-active"><img src="./img/home.2.svg" alt="home icon" /> <span class="side-navbar-text">Home</span></li>
-				<li id="sideNavbarProfile" class="side-navbar-item"><img src="./img/fingerprint-alt.2.svg" alt="profile icon" /> <span class="side-navbar-text">Profile</span></li>
-				<li id="sideNavbarReporting" class="side-navbar-item"><img src="./img/analytics-alt.2.svg" alt="reporting icon" /><span class="side-navbar-text">Reporting</span></li>
-				<li id="sideNavbarBilling" class="side-navbar-item"><img src="./img/money-bill-wave-alt.2.svg" alt="billing icon" /><span class="side-navbar-text">Billing</span></li>
-				<li id="sideNavbarLogout"><a href="index.html"><img src="./img/sign-out-alt.2.svg" alt="log out" /><span class="side-navbar-text">Logout</span></a></li>
-			</ul>
+			<div class="side-navbar-ul">
+				<ul>
+					<li id="sideNavbarHome" class=" side-navbar-item side-navbar-active"><img src="./img/home.2.svg" alt="home icon" /> <span class="side-navbar-text">Home</span></li>
+					<li id="sideNavbarProfile" class="side-navbar-item"><img src="./img/fingerprint-alt.2.svg" alt="profile icon" /> <span class="side-navbar-text">Profile</span></li>
+					<li id="sideNavbarReporting" class="side-navbar-item"><img src="./img/analytics-alt.2.svg" alt="reporting icon" /><span class="side-navbar-text">Reporting</span></li>
+					<li id="sideNavbarBilling" class="side-navbar-item"><img src="./img/money-bill-wave-alt.2.svg" alt="billing icon" /><span class="side-navbar-text">Billing</span></li>
+					<li id="sideNavbarLogout"><a href="index.html"><img src="./img/sign-out-alt.2.svg" alt="log out" /><span class="side-navbar-text">Logout</span></a></li>
+				</ul>
+			</div>
 		</div>
 
 		<div id="overlay"></div>
@@ -192,7 +194,7 @@
 							<div class="billing-card-info-container solid-border">
 								<img class="icon" src="./img/Layer 2.svg" alt="mastercard icon" />
 								<span class="main-p">Visa ending in 5678</span>
-									<div></div>
+									<div class="placeholder"></div>
 								<div class="edit-container">
 									<small class="date">07/22</small>
 									<span class="primary-color">Edit</span>
@@ -209,7 +211,7 @@
 							<div class="billing-card-info-container solid-border">
 								<img class="icon" src="./img/Group 533.svg" alt="mastercard icon" />
 								<span class="main-p">Visa ending in 5678</span>
-								<div></div>
+								<div class="placeholder"></div>
 								<div class="edit-container">
 									<small class="date">07/22</small>
 									<span class="primary-color">Edit</span>
@@ -228,7 +230,7 @@
 							<div class="billing-card-info-container add-payment-container" onclick="openModal(addPaymentModal)">
 								<img class="icon" src="./img/ic-add-circle-outline-24px.svg" alt="mastercard icon"  >
 								<span class="main-p primary-color">Add Payment Method</span>
-									<div></div>
+									<div class="placeholder"></div>
 								<div class="edit-container >
 									<small class="date">07/22</small>
 									<span class="primary-color">Edit</span>
@@ -531,7 +533,7 @@
 								<label for="creditCardNumber">Credit Card Number</label>
 								<input type="text" name="creditCardNumber" id="creditCardNumber" placeholder="Card Number">
 							</div>
-							<div class="flex row">
+							<div class="flex row block-sm">
 								<div class="input-group">
 									<label for="expirationDate">Expiration Date</label>
 									<input type="text" name="expirationDate" id="expirationDate" placeholder="MM">
