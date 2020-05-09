@@ -1,0 +1,1434 @@
+/*********************** GENERAL STYLES AND RESETS ***********************************/
+@font-face {
+	font-family: Optima;
+	font-weight: bold;
+	src: url(../fonts/OptimaLTStd-Bold.otf);
+}
+@font-face {
+	font-family: Optima;
+	font-weight: normal;
+	src: url(../fonts/OptimaLTStd-Medium.otf);
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+h1,h2,h3,h4,h5,h6,p {
+	margin-bottom: 10px;
+}
+
+li {
+	list-style-type: none;
+}
+
+a {
+	text-decoration: none;
+	display: inline-block;
+	color: #212741;
+}
+
+body {
+	font-family: 'Optima', sans-serif;
+	color: #f4f4f4;
+	transition: all 0.3s ease-out;
+	-webkit-transition: all 0.3s ease-out;
+	-moz-transition: all 0.3s ease-out;
+	-ms-transition: all 0.3s ease-out;
+	-o-transition: all 0.3s ease-out;
+}
+
+button{
+	background-color: transparent;
+	border: none;
+}
+
+[class*='btn'] {
+	font-family: 'Optima', sans-serif;
+}
+
+.primary-btn {
+	width: 140px;
+	height: 45px;
+	font-size: 20px;
+	background-color: transparent;
+	border: 2px solid #f4f4f4;
+	color: #f4f4f4;
+}
+
+.primary-color{
+  color: #ff5119;
+}
+
+.secondary-color{
+	color: #0EBE7E;
+}
+
+.primary-btn:hover {
+	background-color: #f4f4f4;
+	color: #333;
+	cursor: pointer;
+}
+
+.input-group{
+	position: relative;
+	/* border: 2px solid red; */
+}
+
+.input-group input {
+	width: 100%;
+	padding: 15px 20px;
+	margin: 15px 0px;
+	border: 1px solid #c9c9c9;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.input-group input:focus {
+	outline-color: #ff5119;
+}
+
+.seperator {
+	height: 1px;
+	width: 45%;
+	display: inline-block;
+	background-color: #c9c9c9;
+}
+
+.centralise {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 14px;
+	margin-bottom: 12px;
+	/* border: 1px solid red; */
+}
+
+.side-navbar-active {
+	border-left: 2px solid #ff5119;
+	color: #ff5119;
+}
+
+.row{
+	width: 100%;
+	display: flex;
+}
+
+.col{
+	width: 50%;
+}
+
+.barchart{
+	width: 80px;
+	height: 40px;
+	float: right;
+}
+
+.source-sans{
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 25px;
+	/* display: block; */
+}
+
+.mr-5{
+	margin-right: 5px;
+}
+
+#overlay{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	backdrop-filter: blur(7px);
+	-webkit-backdrop-filter: blur(7px);
+	z-index: 9;
+	background-color: rgba(30, 30, 30, 0.3);
+	display: none;
+	opacity: 0;
+	transition: all 0.3s ease-out;
+	-webkit-transition: all 0.3s ease-out;
+	-moz-transition: all 0.3s ease-out;
+	-ms-transition: all 0.3s ease-out;
+	-o-transition: all 0.3s ease-out;
+	animation-fill-mode: forwards;
+	-webkit-animation-fill-mode: forwards;
+	-o-animation-fill-mode: forwards;
+}
+
+/************************************* LANDING PAGE STYLES ************************* */
+.main {
+	width: 100%;
+	height: 100vh;
+	background: url(../img/jc-gellidon-Khqmo4T-rs0-unsplash.png);
+	background-size: cover;
+	background-position: center center;
+	position: relative;
+}
+
+.main-content {
+	height: 100%;
+}
+
+.image-overlay {
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.3);
+}
+
+.navbar {
+	width: 100%;
+	height: 100px;
+	/* border: 2px solid red; */
+}
+
+.navbar-container {
+	width: 90%;
+	height: 100%;
+	padding-top: 20px;
+	margin: auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.millimeter-logo img {
+	height: 70px;
+}
+
+.banner {
+	/* border: 2px solid red; */
+	margin-left: 10%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 40%;
+	height: 80%;
+}
+
+.banner h1 {
+	color: #ff5119;
+	font-size: 60px;
+}
+
+.banner p {
+	font-size: 20px;
+	font-family: 'Open Sans', sans-serif;
+}
+
+/******************************* LOGN MODAL ***********************/
+.modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: none;
+	opacity: 0;
+	animation: none;
+	animation-fill-mode: forwards;
+	-webkit-animation: none;
+	-webkit-animation-fill-mode: forwards;
+	z-index: 11;
+}
+
+#loginModal{
+	justify-content: center;
+	align-items: center;
+	background-color: #fff;
+}
+
+#loginModal .modal-content {
+	width: 25%;
+	padding: 30px;
+	box-shadow: 0 0 2px #c9c9c9;
+	text-align: center;
+}
+
+.signin-btn {
+	display: flex;
+	height: 45px;
+	width: 180px;
+	justify-content: center;
+	align-items: center;
+	margin: auto;
+	font-size: 16px;
+	color: #f4f4f4;
+	background-color: #212741;
+	border: none;
+}
+
+.signin-btn:hover {
+	cursor: pointer;
+	opacity: 0.8;
+}
+
+form {
+	color: #212741;
+	font-family: 'Open Sans', sans-serif;
+}
+
+#loginModal .modal-content .millimeter-logo img {
+	height: 60px;
+}
+
+form small {
+	display: block;
+	margin: 12px 0px;
+}
+
+.close-btn {
+	height: 45px;
+	width: 180px;
+	font-size: 16px;
+	border: none;
+	color: #ffffff;
+	background-color: #ccc;
+}
+
+.close-btn:hover {
+	background-color: #bbb;
+	cursor: pointer;
+}
+
+/* fade in animation */
+@keyframes fade {
+	from {
+		opacity: 0;
+		backdrop-filter: blur(0px);
+	}
+	to {
+		opacity: 1;
+		backdrop-filter: blur(7px);
+	}
+}
+@-webkit-keyframes fade {
+	from {
+		opacity: 0;
+		-webkit-backdrop-filter: blur(0px);
+	}
+	to {
+		opacity: 1;
+	-webkit-backdrop-filter: blur(7px);
+	}
+}
+
+/************************* DASHBOARD STYLES *********************/
+.main-nav {
+	width: 100%;
+	height: 60px;
+	position: fixed;
+	top: 0px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #fff;
+	z-index: 10;
+}
+
+.main-nav-items{
+	display: flex;
+	justify-content: space-between;
+	width: calc(100% - 70px);
+	height: 100%;
+}
+
+.hamburger-menu{
+position: relative;
+width: 70px;
+display: flex;
+justify-content: center;
+display: none;
+}
+
+.hamburger-menu i{
+	font-size: 30px;
+}
+
+.main-nav .millimeter-logo {
+	border-right: 2px solid #f2f3f4;
+	height: 100%;
+	width: 180px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.main-nav .millimeter-logo img {
+	height: 40px;
+}
+
+.main-nav #main-nav-ul {
+	/* border: 2px solid red; */
+	height: 100%;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	color: #212741;
+	padding-right: 40px;
+}
+
+.main-nav #main-nav-ul li {
+	display: flex;
+	align-items: center;
+	padding: 0px 20px;
+}
+
+.main-nav #main-nav-ul .profile-pic {
+	height: 40px;
+	width: 40px;
+	border-radius: 50%;
+}
+
+.side-navbar {
+	width: 180px;
+	height: 100%;
+	position: fixed;
+	top: 62px;
+	background-color: #ffffff;
+	border-right: 2px solid #f2f3f4;
+	padding-top: 50px;
+	transition: all 0.3s ease-in-out;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	z-index: 11;
+}
+
+.side-navbar ul li {
+	width: 100%;
+	height: 60px;
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+}
+
+.side-navbar ul li:hover:not(.side-navbar-active) {
+	background-color: #f1f1f1;
+}
+
+.side-navbar ul li img {
+	width: 20px;
+	margin: 0px 20px;
+}
+
+[id*='dashboard'] {
+	width: calc(100% - 180px);
+	height: calc(100vh - 61px);
+	margin-left: 180px;
+	margin-top: 61px;
+	padding: 30px;
+}
+
+/********************* HOME STYLES ********************/
+#dashboard-home {
+	display: grid;
+	grid-gap: 30px;
+	grid-template-columns: auto auto auto 350px;
+	grid-template-rows: 350px auto;
+	grid-template-areas:
+		'activity activity activity  energy-left '
+		'consumption consumption consumption consumption';
+	opacity: 1;
+	animation: none;
+	animation-fill-mode: forwards;
+	-webkit-animation: none;
+	-webkit-animation-fill-mode: forwards;
+}
+
+.dashboard-home-section {
+	background-color: #ffffff;
+}
+
+.activity {
+	grid-area: activity;
+	padding: 30px;
+}
+
+.energy-left {
+	grid-area: energy-left;
+  padding: 30px;
+  display: flex;
+  /* justify-content: center; */
+	align-items: center;
+	flex-direction: column;
+}
+
+.energy-consumption {
+	grid-area: consumption;
+}
+
+.activity-list .activity-list-item {
+	display: flex;
+	width: 100%;
+	padding: 10px;
+	justify-content: space-between;
+	align-items: center;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 12px;
+}
+
+.activity-list .activity-list-item p,
+.activity-list .activity-list-item h3 {
+	margin: 0px;
+}
+.activity-list .activity-list-item small {
+	color: #999a9f;
+	font-size: 10px;
+}
+
+.activity-list .activity-list-item:not(:last-child) {
+	border-bottom: 1px solid #f2f3f4;
+}
+
+.activity-list .activity-list-item .activity-list-item-name {
+	display: flex;
+	align-items: center;
+}
+
+.activity-list .activity-list-item .activity-list-item-amount {
+	text-align: right;
+}
+
+.activity-list .activity-list-item .activity-list-item-amount p{
+	font-weight: bolder;
+}
+
+.activity-list .activity-list-item .activity-list-item-name img {
+	width: 50px;
+	height: 50px;
+	border: 0.5px solid #c9c9c9;
+	border-radius: 15px;
+	padding: 11px;
+	margin-right: 10px;
+}
+
+.view-all-btn {
+	padding: 10px 30px;
+	background-color: #212741;
+	color: #f2f3f4;
+	border: none;
+	display: block;
+	margin-left: auto;
+	cursor: pointer;
+}
+
+.view-all-btn:hover {
+	opacity: 0.8;
+}
+
+.energy-left small{
+	color: #999A9F;
+	font-family: 'Open Sans' sans-serif;
+	margin-bottom: 18px;
+}
+
+.ldBar{
+  width: 70% !important;
+  height: 70% !important;
+	margin: 0;
+	font-family: 'Open Sans' sans-serif ;
+}
+
+.ldBar path.mainline {
+  stroke-width: 2;
+  stroke: #ff5119;
+  stroke-linecap: round;
+}
+	
+.ldBar path.baseline {
+  stroke-width: 2;
+	stroke: #f4f4f4;
+  stroke-linecap: round;
+}
+	
+.ldBar .ldBar-label{
+	font-family: 'Open Sans' sans-serif ;
+	font-size: 40px;
+}
+
+/********************** PROFILE STYLES ***********************/
+#dashboard-profile{
+	display:none;
+	opacity: 0;
+	animation: none;
+	animation-fill-mode: forwards;
+	-webkit-animation: none;
+	-webkit-animation-fill-mode: forwards;
+}
+.dashboard-profile-container {
+	background-color: #ffffff;
+	color: #212741;
+	display: grid;
+	grid-template-columns: 300px auto;
+	grid-template-areas:
+		'profile-pic personal-info personal-info'
+		'profile-pic billing-info billing-info';
+}
+
+.dashboard-profile-section {
+	color: #212741;
+}
+
+.dashboard-profile-container #profile-pic {
+	grid-area: profile-pic;
+	display: flex;
+	flex-direction: column;
+  align-items: center;
+  min-width: 250px;
+  padding-top: 50px;
+}
+
+.dashboard-profile-container #profile-pic img {
+	height: 120px;
+	width: 120px;
+	border-radius: 50%;
+}
+
+.dashboard-profile-container #profile-pic #image-container{
+  position: relative;
+  width: 120px;
+  height: 120px;
+}
+
+.dashboard-profile-container #profile-pic .edit {
+	position: absolute;
+	bottom: 0px;
+  right: 0px;
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+
+.dashboard-profile-container #profile-pic .edit img {
+	width: 25px;
+	height: 25px;
+	padding: 5px;
+}
+
+.dashboard-profile-container #profile-pic h2 {
+	margin-bottom: 0;
+}
+
+.dashboard-profile-container #profile-pic small {
+	color: #999a9f;
+}
+
+.dashboard-profile-container #personal-info {
+  grid-area: personal-info;
+  padding: 30px;
+}
+.billing-info {
+	grid-area: billing-info;
+}
+
+#personal-info-form{
+  width: 80%;
+  color: #212741;
+}
+
+#personal-info-form .input-group{
+  display: inline-block;
+  font-family: 'Open Sans' sans-serif;
+  font-size: 14px;
+}
+
+#personal-info-form .input-group:not(#email-container){
+  width: 48%;
+}
+
+#personal-info-form input{
+  padding: 10px;
+  margin-top: 6px;
+  color: inherit;
+}
+
+#personal-info-form #email-container{
+  width: 100%;
+}
+
+#lname-container, #city-container{
+  float: right;
+}
+
+.personal-info-btn{
+  padding: 10px 50px;
+  background-color: #212741;
+  color: #ffffff;
+  border: none;
+  display: block;
+  margin-left: auto;
+  font-size: 14px;
+}
+
+.personal-info-btn:hover{
+  opacity: 0.8;
+}
+  
+
+.dashboard-profile-container .billing-info{
+  padding: 30px;
+}
+
+.billing-card{
+  height: 120px;
+  padding: 10px 0px;
+  width: 100%;
+  display: flex;
+  border-top: 1px solid #f4f4f4;
+  border-bottom: 1px solid #f4f4f4;
+}
+
+.billing-card .billing-card-img{
+  width: 110px;
+  height: 100%;
+	margin-right: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	/* border: 1px solid red; */
+}
+
+.billing-card .billing-card-img .atm-img{
+  width: 100%;
+  height: 100%;
+}
+
+.billing-card .billing-card-info{
+  display: flex;
+  align-items: center;
+  /* border: 2px solid yellow; */
+  width: 70%;
+}
+
+.billing-card .billing-card-info .billing-card-info-container{
+  display: flex;
+  height: 40%;
+  align-items: center;
+  width: 100%;
+  padding: 0px 10px;
+  justify-content: space-between;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+}
+
+.solid-border{
+	border: 1px solid #f4f4f4;
+}
+
+.billing-card .billing-card-info .billing-card-info-container .edit-container > *{
+  margin-left: 18px;
+}
+
+.billing-card .billing-card-info .billing-card-info-container .edit-container .date{
+  color: #C9C9C9;
+}
+
+#add-payment .edit-container{
+visibility: hidden;
+}
+
+.main-p{
+	font-weight: bold;
+}
+
+.add-payment-img{
+	width: 100%;
+	height: 70px;
+	border: 1px dashed #c9c9c9;
+	border-radius: 3px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.add-payment-img img{
+	height: 35px;
+	width: 35px;
+}
+
+.add-payment-container{
+	border: 1px dashed #c9c9c9;
+	cursor: pointer;
+}
+/********************* REPORTING STYLES **************/
+#dashboard-reporting{
+	display: none;
+	grid-gap: 30px;
+	grid-template-rows: 150px 150px auto;
+	grid-template-columns: 22% 22% auto auto;
+	grid-template-areas: 'energy-left today energy-available meter-condition ''energy-left today cost refill-date' 'consumption consumption consumption consumption';
+	font-family: 'Open Sans', sans-serif;
+	opacity: 0;
+	animation: none;
+	animation-fill-mode: forwards;
+	-webkit-animation: none;
+	-webkit-animation-fill-mode: forwards;
+}
+
+#dashboard-reporting .dashboard-profile-section{
+	background-color: #ffffff;
+}
+
+.today{
+	grid-area: today;
+	padding: 30px;
+	display: flex;
+	flex-direction: column;
+}
+
+/* #dashboard-reporting .energy-left{
+} */
+
+.today-content{
+	/* height: 50%; */
+	display: flex;
+	flex-direction: column;
+	padding: 15px 0px;
+	border-bottom: 1px solid #f4f4f4;
+	margin-bottom: 15px;
+}
+
+.today .figure{
+	font-size: 4em;
+}
+
+.today h2, .energy-left h2{
+	font-family: 'Optima', sans-serif;
+}
+
+ .today p{
+	 margin-bottom: 0em;
+ }
+
+.today .figure sup, .today small{
+	color: #999a9f;
+	font-size: 12px;
+	margin-bottom: 0;
+}
+
+.today .amount{
+	vertical-align: middle;
+	text-align: center;
+}
+
+.energy-available{
+	grid-area: energy-available;
+}
+
+.mini-section{
+	padding: 20px 15px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.mini-section small{
+	font-family: 'Source Sans Pro', sans-serif;
+	line-height: 10px;
+}
+
+.muted-heading{
+	font-size: 14px;
+	color: #999A9F;
+}
+
+.turn-off-btn{
+	width: 100%;
+	height: 40px;
+	background-color: #ff5119;
+	border: none;
+	vertical-align: bottom;
+	color: white;
+	font-size: 12px;
+}
+.topup-btn{
+	width: 100%;
+	height: 40px;
+	background-color: #0EBE7E;
+	border: none;
+	vertical-align: bottom;
+	color: white;
+	font-size: 12px;
+}
+
+.flex{
+	display: flex;
+}
+
+.flex-col{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	justify-content: flex-end;
+}
+
+.flex-end{
+	display: flex;
+	align-items: flex-end;
+	justify-content: flex-end;
+}
+
+.flex-center{
+	display: flex;
+	justify-content: center;
+}
+
+.cost{grid-area: cost;}
+.meter-condition{grid-area: meter-condition;}
+.refill-date{grid-area: refill-date;}
+
+
+/************* BILLING STYLES *************************/
+#dashboard-billing{
+	display: none;
+	opacity: 0;
+	animation: none;
+	animation-fill-mode: forwards;
+	-webkit-animation: none;
+	-webkit-animation-fill-mode: forwards;
+}
+.dashboard-billing-container{
+	background-color: #ffffff;
+	color: #212741;
+	padding: 60px;
+}
+
+.pay-section {
+	min-height: 300px;
+	margin-top: 30px !important;
+	border: 1px solid #C9C9C9;
+	padding: 40px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 60%;
+	margin: auto;
+}
+
+
+.pay-section .input-group{
+	width: 43%;
+}
+
+.payment-history{
+	padding-left: 30px;
+	width: 35%;
+}
+
+.payment{
+	align-self: flex-end;
+	text-align: right;
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+
+.pay-btn{
+	width: 120px;
+	height: 41px;
+	background-color: #212741;
+	color: #ffffff;
+	border: none;
+	margin-top: 7px;
+}
+
+.pay-btn:hover{
+	opacity: 0.8;
+}
+
+.billing-card input[type="checkbox"]{
+	width: 20px;
+	height: 20px;
+}
+
+.dashboard-billing-container .billing-info{
+	flex-grow: 2;
+	border-right: 1px solid #f4f4f4;
+}
+
+.dashboard-billing-container .billing-card{
+	border: 0;
+}
+
+.dashboard-billing-container .billing-card-info{
+	width: 80%;
+}
+
+.pay-section .form-container .flex{
+	justify-content: space-between;
+}
+
+.billing-info h3{
+	font-size: 16px;
+	margin-left: 10px;
+}
+
+.lock-img{
+	position: absolute;
+	right: 12px;
+	bottom: 32px;
+}
+
+.payment-history{
+	color: #212741;
+}
+
+/* checkbox styles */
+.dashboard-billing .checkbox-container input{
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+}
+
+.dashboard-billing .checkbox-container{
+	position: relative;
+	display: inline-block;
+	/* border: 2px solid red; */
+	width: 20px;
+	height: 20px;
+}
+
+.dashboard-billing .checkbox-container .checkmark{
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	display: inline-block;
+	height: 20px;
+	width: 20px;
+	margin-top: 5px;
+	background-color: transparent;
+	/* border-radius: 5px; */
+	transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+	border: 1px solid #ff5119;
+}
+
+.dashboard-billing .checkbox-container .checkmark::after{
+  position: absolute;
+	content: "";
+	left: 10px;
+	top: 10px;
+	height: 0px;
+	width: 0px;
+	border-radius: 5px;
+	border: solid #212741;
+	border-width: 0 3px 3px 0;
+	-webkit-transform: rotate(0deg) scale(0);
+	-ms-transform: rotate(0deg) scale(0);
+	transform: rotate(0deg) scale(0);
+	opacity:1;
+	transition: all 0.3s ease-out;
+	-webkit-transition: all 0.3s ease-out;
+	-moz-transition: all 0.3s ease-out;
+	-ms-transition: all 0.3s ease-out;
+	-o-transition: all 0.3s ease-out;
+}
+
+.checkbox-container input:checked ~ .checkmark {
+	background-color: #FFFFFF;
+	-webkit-transform: rotate(0deg) scale(1);
+	-ms-transform: rotate(0deg) scale(1);
+	transform: rotate(0deg) scale(1);
+	opacity:1;
+	border: 1px solid #ff5119;
+}
+
+.checkbox-container input:checked ~ .checkmark::after {
+  -webkit-transform: rotate(45deg) scale(1);
+  -ms-transform: rotate(45deg) scale(1);
+  transform: rotate(45deg) scale(1);
+  opacity:1;
+  left: 6px;
+  top: 2px;
+  width: 4px;
+  height: 10px;
+  border: solid #212741;
+  border-width: 0 2px 2px 0;
+  background-color: transparent;
+  border-radius: 0;
+}
+
+.checkmark:hover{
+	cursor: pointer;
+}
+
+.line-chart{
+	width: 100%;
+}
+
+/* ALL ACTIVITY MODAL */
+.modal-container{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(50, 50, 50, 0.3);
+	backdrop-filter: blur(7px);
+	-webkit-backdrop-filter: blur(7px);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+#activity-modal .modal-content{
+	background-color: #ffffff;
+	width: 50%;
+	padding: 5px 30px;
+}
+
+.modal-header{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+#activity-modal-close{
+	cursor: pointer;
+	border: none;
+	background-color: #ffffff;
+}
+
+#chart1, #chart2{
+	overflow-x: scroll;
+}
+
+/****************** ADD PAYMENT MODAL *********************/
+#addPaymentModal .modal-content{
+	width: 35%;
+	background-color: #ffffff;
+	padding: 20px;
+}
+
+.credit-card-text-container{
+	border: 1px solid #c9c9c9;
+}
+
+.credit-card-form input{
+	margin-top: 3px;
+	border: 1px solid #C9C9C9;
+}
+
+.credit-card-form .input-group{
+	margin-top: 10px;
+}
+
+.credit-card-form label{
+	font-size: 16px;
+	color: #212741;
+}
+
+.credit-card-logo{
+	/* border: 2px solid red; */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 50px;
+}
+
+.mastercard{
+	background-color: #C9C9C9;
+}
+
+.visa img{
+	height: 25px;
+}
+
+.mastercard img{
+	height: 35px;
+}
+
+.credit-card-text{
+	padding: 20px;
+	font-size: 10px;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.exp-year-label{
+	visibility: hidden;
+}
+
+.credit-card-form .input-group{
+	margin: 10px;
+}
+
+.credit-card-form p{
+	font-size: 14px;
+}
+
+.credit-card-form p img{
+	margin-right: 5px;
+}
+
+.cancel-btn, .add-btn{
+	height: 50px;
+	width: 45%;
+	margin: 15px;
+	color: white;
+}
+
+.cancel-btn{
+	background-color: #C9C9C9;
+}
+
+.add-btn{
+	background-color: #212741;
+}
+
+#addPaymentModal .modal-header h2{
+	font-size: 20px;
+	margin-left: 30%;
+}
+
+/*********************** MEDIA QUERIES *****************/
+@media (max-width: 1280px){
+	#dashboard-home{
+		grid-template-columns: auto auto auto 300px;
+	}
+
+	.dashboard-profile-container{
+		grid-template-columns: 200px auto;
+	}
+
+	#personal-info-form{
+		width: 90%;
+	}
+
+	#dashboard-reporting{
+		grid-template-areas:
+				'energy-left today' 
+				'cost energy-available '
+				 'meter-condition refill-date'
+				'consumption consumption';
+		grid-template-columns: 50%;
+		grid-template-rows: auto ;
+	}
+
+	#addPaymentModal .modal-content{
+		width: 45%;
+	}
+}
+
+@media (max-width: 1024px){
+	.banner{
+		width: 60%;
+	}
+
+		#addPaymentModal .modal-content{
+		width: 55%;
+	}
+
+	#loginModal .modal-content{
+		width: 40%;
+	}
+
+	.dashboard-profile-container{
+		grid-template-areas:'profile-pic''personal-info''billing-info';
+		grid-template-columns: 100%;
+	}
+
+	#dashboard-home{
+		grid-template-columns: auto auto auto 250px;
+	}
+
+	.ldBar{
+		width: 85% !important;
+		height: 85% !important;
+	}
+
+	#personal-info-form{
+		width: 100%;
+	}
+
+	#dashboard-reporting{
+		grid-template-areas:
+				'energy-available today' 
+				'cost today '
+				 'meter-condition refill-date'
+				'consumption consumption';
+		grid-template-columns: 50%;
+		grid-template-rows: auto ;
+	}
+
+	#dashboard-reporting .energy-left{
+		display: none;
+	}
+
+	.block{
+		display: block;
+	}
+
+	.dashboard-billing-container .billing-info{
+		border: none;
+	}
+	
+	.payment-history{
+		width: 100%;
+		margin: 30px 0;
+		padding: 0;
+	}
+	
+.pay-section{
+	width: 100%;
+}
+
+
+}
+@media (max-width: 768px){
+
+  .pay-section .input-group{
+	width: 100%;
+  }
+
+		#addPaymentModal .modal-content{
+		width: 70%;
+	}
+
+	.block-md{
+		display: block;
+	}
+
+  #loginModal .modal-content{
+		width: 50%;
+  }
+	.main-nav .millimeter-logo{
+		border: none;
+	}
+
+	.side-navbar{
+		width: 70px;
+	}
+
+	.side-navbar-text{
+		display: none;
+	}
+
+	[id*='dashboard']{
+		width: calc(100% - 70px);
+    margin-left: 70px;
+	}
+
+	#activity-modal .modal-content{
+		width: 70%;
+		border-radius: 2px;
+	}
+
+	#dashboard-home{
+		grid-template-areas:'activity''energy-left''consumption';
+		grid-template-columns: 100%;
+		grid-template-rows: auto 350px auto;
+	}
+
+	#dashboard-reporting{
+			grid-template-columns: 40% auto;
+	}
+
+	.hamburger-menu{
+		display: flex;
+	}
+}
+
+@media (max-width: 600px){
+  #loginModal .modal-content{
+		width: 80%;
+	}
+
+		#addPaymentModal .modal-content{
+		width: 90%;
+	}
+	
+	.millimeter-logo img{
+		height: 50px;
+		width: 150px;
+	}
+
+	.primary-btn{
+		width: 100px;
+		font-size: 15px;
+	}
+	
+	.banner{
+		width: 80%;
+	}
+
+	.banner h1{
+		font-size: 40px;
+	}
+
+	.banner p{
+		font-size: 15px;
+	}
+
+	[id*='dashboard']{
+		padding: 0;
+	}
+	
+	.user-name{
+		display: none;
+	}
+
+	.side-navbar{
+		transform: translateX(-300px);
+	}
+
+	[id*=dashboard]{
+		width: 100%;
+		margin-left: 0;
+	}
+
+	#activity-modal .modal-content{
+		width: 90%;
+	}
+
+	#personal-info-form .input-group{
+		width: 100% !important;
+	}	
+
+	.billing-card-img{
+		display: none !important;
+	}
+
+	.billing-card .billing-card-info{
+		width: 100%;
+	}
+
+	#dashboard-reporting {
+		grid-template-areas:'today''energy-available''cost  ''meter-condition' 'refill-date''consumption';
+		grid-template-columns: 100%;
+		padding: 30px;
+}
+
+	.billing-card-info-container{
+		border: 1px solid #f4f4f4;
+	}
+
+	.dashboard-billing-container{
+		padding: 20px;
+	}
+}
+
+@media (max-width: 450px){
+	.main-nav #main-nav-ul li{
+		padding: 0px 10px;
+	}
+
+		#addPaymentModal .modal-content{
+		width: 95%;
+	}
+}
+
+@media (min-width: 1800px){
+	#loginModal .modal-content{
+		width: 20%;
+	}
+
+	.dashboard-profile-container{
+		grid-template-columns: 400px 600px 600px;
+	}
+
+	.pay-section{
+		width: 40%;
+	}
+
+	.dashboard-billing-container .billing-info{
+		width: 50%;
+	}
+}
