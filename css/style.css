@@ -154,6 +154,24 @@ button{
 	-o-animation-fill-mode: forwards;
 }
 
+.side-navbar-ul::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE and Edge */
+.side-navbar-ul {
+  -ms-overflow-style: none;
+}
+
+.side-navbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE and Edge */
+.side-navbar {
+  -ms-overflow-style: none;
+}
+
 /************************************* LANDING PAGE STYLES ************************* */
 .main {
 	width: 100%;
