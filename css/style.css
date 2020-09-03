@@ -465,7 +465,7 @@ display: none;
 	display: grid;
 	grid-gap: 30px;
 	grid-template-columns: auto auto auto 350px;
-	grid-template-rows: 350px auto;
+	grid-template-rows: 350px 350px;
 	grid-template-areas:
 		'activity activity activity  energy-left '
 		'consumption consumption consumption consumption';
@@ -478,16 +478,15 @@ display: none;
 
 .dashboard-home-section {
 	background-color: #ffffff;
+	padding: 30px;
 }
 
 .activity {
 	grid-area: activity;
-	padding: 30px;
 }
 
 .energy-left {
 	grid-area: energy-left;
-  padding: 30px;
   display: flex;
   /* justify-content: center; */
 	align-items: center;
@@ -496,6 +495,22 @@ display: none;
 
 .energy-consumption {
 	grid-area: consumption;
+}
+
+.energy-consumption h2{
+	margin-bottom: 40px;
+}
+
+#dashboard-home .energy-consumption .chart1{
+	height: 80%;
+}
+
+.energyConsumptionChart{
+	height: 100%;
+}
+
+.chart2{
+	font-family: 'Optima', sans-serif;
 }
 
 .activity-list .activity-list-item {
@@ -1133,7 +1148,7 @@ visibility: hidden;
 	background-color: #ffffff;
 }
 
-#chart1, #chart2{
+#chart1{
 	overflow-x: scroll;
 }
 
