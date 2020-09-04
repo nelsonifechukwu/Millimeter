@@ -27,6 +27,8 @@ const reportingNavBtn = document.getElementById('sideNavbarReporting');
 const billingNavBtn = document.getElementById('sideNavbarBilling');
 const logoutNavBtn = document.getElementById('sideNavbarLogout');
 
+const topupBtn = document.getElementById('topupBtn');
+
 const dashboardHome = document.getElementById('dashboard-home');
 const dashboardProfile = document.getElementById('dashboard-profile');
 const dashboardReporting = document.getElementById('dashboard-reporting');
@@ -172,6 +174,12 @@ if (activityModalCloseBtn) {
 if (addPaymentModalCloseBtn) {
 	addPaymentModalCloseBtn.addEventListener('click', function () {
 		close(addPaymentModal);
+	});
+}
+
+if (topupBtn) {
+	topupBtn.addEventListener('click', () => {
+		openDashboardSection(dashboardBilling, billingNavBtn, billingNavImg);
 	});
 }
 
