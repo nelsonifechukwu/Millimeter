@@ -1,3 +1,8 @@
+<?php
+  
+  require_once('backend/login.php');
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -41,15 +46,15 @@
 					<div class="millimeter-logo">
 						<img src="./img/millimeter-logo.svg" alt="Millimeter logo" />
 					</div>
-					<form action="#">
+					<form action="" method="post">
 						<div class="input-group">
-							<input type="text" name="userId" id="userId" placeholder="User ID" />
+							<input type="email" required name="email" id="userId" placeholder="Email" />
 						</div>
 						<div class="input-group">
-							<input type="password" name="password" id="password" placeholder="Password" />
+							<input type="password" required name="password" id="password" placeholder="Password" />
 						</div>
 						<div>
-							<a class="signin-btn" href="dashboard.html">SIGN IN</a>
+							<button class="signin-btn" type="submit" name="login">SIGN IN</button>
 						</div>
 						<small>Having trouble signing in?</small>
 						<div class="centralise">

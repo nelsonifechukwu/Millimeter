@@ -1,3 +1,9 @@
+<?php
+	require_once('backend/header-admin.php');
+	include('./backend/sensor_values.php');
+?>
+
+<script type="text/javascript">
 
 const loginModal = document.getElementById('loginModal');
 const activityModal = document.getElementById('activity-modal');
@@ -245,7 +251,7 @@ let demo = {
 			type: 'line',
 			responsive: true,
 			data: {
-				labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+				labels: <?php echo $reading_time;?>,//["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
 				datasets: [{
 					label: "Active Users",
 					borderColor: "#f96332",
@@ -258,7 +264,7 @@ let demo = {
 					fill: true,
 					backgroundColor: gradientFill,
 					borderWidth: 2,
-					data: [542, 480, 430, 550, 530, 453, 380, 434, 568, 610, 700, 630]
+					data: <?php echo $voltage;?>//[542, 480, 430, 550, 530, 453, 380, 434, 568, 610, 700, 630]
 				}]
 			},
 			options: gradientChartOptionsConfiguration
@@ -330,7 +336,7 @@ demo.initDashboardPageCharts = function () {
 	gradientStroke.addColorStop(0, 'rgba(255, 100, 145,0)'); //purple colors
 
 	var data = {
-		labels: ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov', 'Dec'],
+		labels: <?php echo $reading_time;?>,//['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov', 'Dec'], //LABELS
 		datasets: [{
 			label: "Data",
 			fill: true,
@@ -346,7 +352,7 @@ demo.initDashboardPageCharts = function () {
 			pointHoverRadius: 4,
 			pointHoverBorderWidth: 15,
 			pointRadius: 4,
-			data: [500,905,300,1500,400,1203,1400,350,700,1400,900,1500] //CHART DATA
+			data: <?php echo $voltage;?>//[500,905,300,1500,400,1203,1400,350,700,1400,900,1500] //CHART DATA
 		}]
 	};
 
@@ -368,7 +374,7 @@ demo.initDashboardPageCharts = function () {
 	gradientStroke.addColorStop(0, 'rgba(255, 100, 145,0)'); //purple colors
 
 	var data = {
-		labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'], //LABELS
+		labels: <?php echo $reading_time;?>,//['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'], //LABELS
 		datasets: [{
 			label: "Data",
 			fill: true,
@@ -384,7 +390,7 @@ demo.initDashboardPageCharts = function () {
 			pointHoverRadius: 4,
 			pointHoverBorderWidth: 15,
 			pointRadius: 4,
-			data: [500, 905, 300, 1500, 400, 1203, 1400, 350, 700, 1400, 900, 1500] //CHART DATA
+			data: <?php echo $voltage;?>//[500, 905, 300, 1500, 400, 1203, 1400, 350, 700, 1400, 900, 1500] //CHART DATA
 		}]
 	};
 
@@ -400,3 +406,5 @@ demo.initDashboardPageCharts = function () {
 
 
 demo.initDashboardPageCharts();
+
+</script>

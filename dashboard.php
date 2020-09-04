@@ -1,3 +1,8 @@
+<?php
+require_once('backend/header-admin.php');
+include('./backend/sensor_values.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -48,7 +53,7 @@
 					<li id="sideNavbarProfile" class="side-navbar-item"><img src="./img/fingerprint-alt.2.svg" alt="profile icon" /> <span class="side-navbar-text">Profile</span></li>
 					<li id="sideNavbarReporting" class="side-navbar-item"><img src="./img/analytics-alt.2.svg" alt="reporting icon" /><span class="side-navbar-text">Reporting</span></li>
 					<li id="sideNavbarBilling" class="side-navbar-item"><img src="./img/money-bill-wave-alt.2.svg" alt="billing icon" /><span class="side-navbar-text">Billing</span></li>
-					<li id="sideNavbarLogout"><a href="index.html"><img src="./img/sign-out-alt.2.svg" alt="log out" /><span class="side-navbar-text">Logout</span></a></li>
+					<li id="sideNavbarLogout"><a href="backend/logout.php"><img src="./img/sign-out-alt.2.svg" alt="log out" /><span class="side-navbar-text">Logout</span></a></li>
 				</ul>
 			</div>
 		</div>
@@ -103,8 +108,8 @@
 			</div>
 			<div class="dashboard-home-section energy-left">
 				<h2>Energy Left</h2>
-				<small>740.27Kwh of 987Kwh</small>
-				<div class="ldBar label-center" data-value="75" data-preset="circle">
+				<small><?php echo $voltage_left; ?>Kwh of 987Kwh</small>
+				<div class="ldBar label-center" data-value="<?php echo floor($voltage_percentage_left); ?>" data-preset="circle">
 					<div class="ldBar-body"></div>
 				</div>
 			</div>
@@ -533,9 +538,9 @@
 			</div>
 		</div>
 
-
 		<script src="./js/loading-bar.min.js"></script>
 		<script src="./js/chartjs.min.js"></script>
-		<script src="./js/app.js"></script>
+		<?php include("./js/app.php"); ?>
+		
 	</body>
 </html>
