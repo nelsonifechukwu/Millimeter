@@ -282,7 +282,7 @@ include('./backend/sensor_values.php');
 						<small>Your energy usage is <br /><span class="secondary-color">EFFICIENT</span></small>
 					</div>
 					<div class="col flex-end">
-						<button class="topup-btn">TOP-UP</button>
+						<button class="topup-btn" id="topupBtn" >TOP-UP</button>
 					</div>
 				</div>
 			</div>
@@ -540,6 +540,7 @@ include('./backend/sensor_values.php');
 
 		<script src="./js/loading-bar.min.js"></script>
 		<script src="./js/chartjs.min.js"></script>
+		<script src="./js/app.js"></script>
 		<?php include("./js/app.php"); ?>
 		
 	</body>

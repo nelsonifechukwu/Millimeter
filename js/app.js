@@ -26,6 +26,8 @@ const dashboardProfile = document.getElementById('dashboard-profile');
 const dashboardReporting = document.getElementById('dashboard-reporting');
 const dashboardBilling = document.getElementById('dashboard-billing');
 
+const topupBtn = document.getElementById('topupBtn');
+
 const homeNavImg = './img/home.2.svg';
 const profileNavImg = './img/fingerprint.2.svg';
 const reportingNavImg = './img/analytics.2.svg';
@@ -169,6 +171,11 @@ if (addPaymentModalCloseBtn) {
 	});
 }
 
+if (topupBtn) {
+	topupBtn.addEventListener('click', () => {
+		openDashboardSection(dashboardBilling, billingNavBtn, billingNavImg);
+	});
+}
 
 
 
