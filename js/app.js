@@ -27,6 +27,8 @@ const dashboardReporting = document.getElementById('dashboard-reporting');
 const dashboardBilling = document.getElementById('dashboard-billing');
 
 const topupBtn = document.getElementById('topupBtn');
+const meterState = document.getElementById('meter-state');
+const toggleBtn = document.getElementById('toggle-btn');
 
 const homeNavImg = './img/home.2.svg';
 const profileNavImg = './img/fingerprint.2.svg';
@@ -39,6 +41,8 @@ const reportingNavImgDefault = './img/analytics-alt.2.svg';
 const billingNavImgDefault = './img/money-bill-wave-alt.2.svg';
 
 const sideNavbarItemImg = [homeNavImgDefault, profileNavImgDefault, reportingNavImgDefault, billingNavImgDefault];
+
+
 
 function openModal(modalName) {
 	modalName.style.display = 'flex';
@@ -176,6 +180,19 @@ if (topupBtn) {
 		openDashboardSection(dashboardBilling, billingNavBtn, billingNavImg);
 	});
 }
+
+if (toggleBtn) {
+	toggleBtn.addEventListener('click', (e) => {
+		if (meterState.innerHTML == 'OFF') {
+			meterState.innerHTML = 'ON';
+			toggleBtn.classList.add('btn-active')
+		} else {
+			meterState.innerHTML = 'OFF';
+			toggleBtn.classList.remove('btn-active')
+	}
+	})
+}
+
 
 
 

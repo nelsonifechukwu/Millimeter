@@ -266,11 +266,15 @@ include('./backend/sensor_values.php');
 				<h2 class="muted-heading">Meter Condition</h2>
 				<div class="row">
 					<div class="col">
-						<span class="source-sans">ON</span><br />
+						<span class="source-sans" id="meter-state">OFF</span><br />
 						<small class="secondary-color">GOOD</small>
 					</div>
 					<div class="col flex-end">
-						<button class="turn-off-btn">TURN OFF</button>
+						<div class="">
+							<div class="toggle-btn" id="toggle-btn">
+								<div class="inner-circle"></div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>

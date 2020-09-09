@@ -28,6 +28,8 @@ const billingNavBtn = document.getElementById('sideNavbarBilling');
 const logoutNavBtn = document.getElementById('sideNavbarLogout');
 
 const topupBtn = document.getElementById('topupBtn');
+const meterState = document.getElementById('meter-state');
+const toggleBtn = document.getElementById('toggle-btn');
 
 const dashboardHome = document.getElementById('dashboard-home');
 const dashboardProfile = document.getElementById('dashboard-profile');
@@ -183,7 +185,17 @@ if (topupBtn) {
 	});
 }
 
-
+if (toggleBtn) {
+	toggleBtn.addEventListener('click', (e) => {
+		if (meterState.innerHTML == 'OFF') {
+			meterState.innerHTML = 'ON';
+			toggleBtn.classList.add('btn-active')
+		} else {
+			meterState.innerHTML = 'OFF';
+			toggleBtn.classList.remove('btn-active')
+	}
+	})
+}
 
 
 //CHART JS
