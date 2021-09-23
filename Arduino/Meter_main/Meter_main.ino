@@ -31,7 +31,7 @@ String BalanceSms = "This is an SMS from Smart Energy Meter & your balance is ";
 //watch when replacing Serial1 with serial1
 #define AccessPointName "airtelgprs.com"
 // Set the address of the server where the measurements should be reported.
-#define HTTPserver "http://neilz.000webhostapp.com"
+#define HTTPserver "***"
 // Set the URL of the program that receives the measurements.
 #define HTTPurl "/newdata.php?"
 
