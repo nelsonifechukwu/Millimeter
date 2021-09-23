@@ -1,5 +1,5 @@
 
-<img src="https://user-images.githubusercontent.com/44223263/130352812-ece3ffd4-809a-41cb-a6ee-8c2e8ebe4fc0.jpeg" width="100" height="100">
+<img src="https://user-images.githubusercontent.com/44223263/130352812-ece3ffd4-809a-41cb-a6ee-8c2e8ebe4fc0.jpeg" width="600" height="600">
 
 # Millimeter
 
