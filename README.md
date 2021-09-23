@@ -1,4 +1,6 @@
-![millimeter](https://user-images.githubusercontent.com/44223263/130352812-ece3ffd4-809a-41cb-a6ee-8c2e8ebe4fc0.jpeg)
+
+<img src="https://user-images.githubusercontent.com/44223263/130352812-ece3ffd4-809a-41cb-a6ee-8c2e8ebe4fc0.jpeg" width="100" height="100">
+
 # Millimeter
 
 How can we build a Smart Metering system for just under $40. This is a project as an entry into the Lagos smartmeter competition.
