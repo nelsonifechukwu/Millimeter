@@ -8,17 +8,23 @@ How can we build a Smart Metering system for just under $40. This is a project a
 - Building the Hardware
 - Designing the Software
 
-# Building the Hardware
+# Building the Hardware (Check the Complete Analysis.pdf for a quick overview)
 
-- Using an ardiuno and GSM/GPRS module for internet connectivity
- - 
- - 
+
+
+- Using an arduino for processing and GSM/GPRS module for internet connectivity
+
+ - Make the necessary electrical connections
+ - Upload the file at Arduino/Meter_main/Meter_main.ino to your arduino
+ 
 - Using an ESP32 for processing and internet connectivity 
+ - Make the necessary electrical connections @ https://github.com/BSP-Embed/IoT-Energy-Meter -> Circuit Diagrams.
+ - Upload the file at Arduino/Meter_ESP32/Meter_ESP32.ino to your ESP32 
+
 
 
 # Designing the software
   
 - Designing the embedded software
 
-
-- Desigining the IoT platform  
+- Designing the IoT platform  
