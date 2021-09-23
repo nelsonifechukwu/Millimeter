@@ -10,9 +10,15 @@ How can we build a Smart Metering system for just under $40. This is a project a
 
 # Building the Hardware
 
+- Using an ardiuno and GSM/GPRS module for internet connectivity
+ - 
+ - 
+- Using an ESP32 for processing and internet connectivity 
 
 
 # Designing the software
   
+- Designing the embedded software
 
 
+- Desigining the IoT platform  
